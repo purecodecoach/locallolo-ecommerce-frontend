@@ -57,7 +57,7 @@ import primaryTheme from './themes/primaryTheme';
 
 // footer data
 import footerData from './assets/data/footerData';
-import ThemeOptions from './components/ThemeOptions/ThemeOptions';
+// import ThemeOptions from './components/ThemeOptions/ThemeOptions';
 import AdminLayout from './components/AdminLayout';
 
 //const EcommerceLayout = () => 

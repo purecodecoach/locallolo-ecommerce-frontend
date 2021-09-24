@@ -28,7 +28,7 @@ class HomePageOne extends React.Component {
       super(props);
       this.state = {
          banner: null,
-         products: null,
+         products: [],
          blogs: null,
          siteFeatures: [],
          testimonial: [],
@@ -58,13 +58,14 @@ class HomePageOne extends React.Component {
 
    //get products data
    getProducts() {
-      const productsRef = firebase.database().ref('products');
-      productsRef.on('value', (snapshot) => {
-         let products = snapshot.val();
-         this.setState({
-            products: products
-         });
-      });
+      // const productsRef = firebase.database().ref('products');
+      // productsRef.on('value', (snapshot) => {
+      //    let products = snapshot.val();
+      //    this.setState({
+      //       products: products
+      //    });
+      // });
+
    }
 
    //get blogs data
