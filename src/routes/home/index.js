@@ -58,13 +58,13 @@ class HomePageOne extends React.Component {
 
    //get products data
    getProducts() {
-      // const productsRef = firebase.database().ref('products');
-      // productsRef.on('value', (snapshot) => {
-      //    let products = snapshot.val();
-      //    this.setState({
-      //       products: products
-      //    });
-      // });
+      const productsRef = firebase.database().ref('products');
+      productsRef.on('value', (snapshot) => {
+         let products = snapshot.val();
+         this.setState({
+            products: products
+         });
+      });
 
    }
 

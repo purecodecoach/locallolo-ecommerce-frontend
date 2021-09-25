@@ -18,6 +18,7 @@ import SidebarMenu from '../sidebar';
 import FixedHeader from '../headers/FixedHeader';
 import AppConfig from '../../../constants/AppConfig';
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 class HeaderOne extends React.Component {
 
@@ -47,6 +48,10 @@ class HeaderOne extends React.Component {
       return (
          <div>
             <AppBar position="static" className={`iron-header-wrapper bg-primary iron-header-v1 ${(this.state.fixedHeader) ? 'header-fixed' : ''}`}>
+               <Helmet>
+                  <title>Locallolo Ecommerce</title>
+                  <link rel="canonical" href="http://mysite.com/example" />
+               </Helmet>
                <div className="iron-header-top py-30">
                   <div className="container">
                      <Grid container spacing={0} >

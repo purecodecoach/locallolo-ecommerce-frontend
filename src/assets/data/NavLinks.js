@@ -241,10 +241,10 @@ export default [
       "icon": "perm_contact_calendar",
       "child_routes": null
    },
-   {
-      "menu_title": "menu.adminPanel",
-      "path": "/admin-panel/admin",
-      "icon": "perm_identity",
-      "child_routes": null
-   }
+   // {
+   //    "menu_title": "menu.adminPanel",
+   //    "path": "/admin-panel/admin",
+   //    "icon": "perm_identity",
+   //    "child_routes": null
+   // }
 ]
