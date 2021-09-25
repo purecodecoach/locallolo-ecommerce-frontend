@@ -7,28 +7,8 @@ export default [
    {
       "menu_title": "menu.Home",
       "type": "subMenu",
-      "path": "javascript:void(0)",
-      "icon": "home",
-      "child_routes": [
-         {
-            "path": "/",
-            "menu_title": "menu.HomeOne",
-            "icon": "arrow_right_alt",
-            "child_routes": null
-         },
-         {
-            "path": "/home-two",
-            "menu_title": "menu.HomeTwo",
-            "icon": "arrow_right_alt",
-            "child_routes": null
-         },
-         {
-            "path": "/home-three",
-            "menu_title": "menu.HomeThree",
-            "icon": "arrow_right_alt",
-            "child_routes": null
-         }
-      ]
+      "path": "/",
+      "icon": "home"
    },
    {
       "menu_title": "menu.shop",
@@ -158,7 +138,7 @@ export default [
       }
    },
    {
-      "menu_title": "menu.pages",
+      "menu_title": "menu.aboutUs",
       "path": "javascript:void(0)",
       "type": "subMenu",
       "icon": "pages",
@@ -186,52 +166,6 @@ export default [
             "menu_title": "menu.faq",
             "icon": "arrow_right_alt",
             "child_routes": null
-         }
-         ,
-         {
-            "path": "/page-404",
-            "menu_title": "menu.404Page",
-            "icon": "arrow_right_alt",
-            "child_routes": null
-         },
-         {
-            "path": "/blogs/detail/1",
-            "menu_title": "menu.blogDetail",
-            "icon": "arrow_right_alt",
-            "child_routes": null
-         },
-         {
-            "path": "/account/profile",
-            "menu_title": "menu.userProfile",
-            "icon": "arrow_right_alt",
-            "child_routes": null
-         },
-         {
-            "path": "javascript:void(0)",
-            "menu_title": "menu.session",
-            "icon": "arrow_right_alt",
-            "child_routes": [
-               {
-                  "path": "/sign-in",
-                  "menu_title": "menu.signIn",
-                  "icon": "arrow_right_alt"
-               },
-               {
-                  "path": "/sign-up",
-                  "menu_title": "menu.register",
-                  "icon": "arrow_right_alt"
-               },
-               {
-                  "path": "/forget-password",
-                  "menu_title": "menu.forgotPassword",
-                  "icon": "arrow_right_alt"
-               },
-               {
-                  "path": "/thank-you",
-                  "menu_title": "menu.thankYou",
-                  "icon": "arrow_right_alt"
-               }
-            ]
          }
       ]
    },
