@@ -271,7 +271,7 @@ class PaymentTabs extends React.Component {
                                        color="secondary"
                                     />
                                     <div className="text-center">
-                                       <a href="javascript:void(0);">
+                                       <a href="#;">
                                           <img src={bankOption.image} alt="bank" width="250" height="49" />
                                        </a>
                                     </div>

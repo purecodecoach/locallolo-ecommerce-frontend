@@ -13,7 +13,7 @@ export default [
    {
       "menu_title": "menu.shop",
       "type": "subMenu",
-      "path": "javascript:void(0)",
+      "path": "#",
       "icon": "pages",
       "child_routes": [
          {
@@ -51,7 +51,7 @@ export default [
    },
    {
       "menu_title": "menu.categories",
-      "path": "javascript:void(0)",
+      "path": "#",
       "mega": true,
       "icon": "party_mode",
       "type": "mega",
@@ -139,7 +139,7 @@ export default [
    },
    {
       "menu_title": "menu.aboutUs",
-      "path": "javascript:void(0)",
+      "path": "#",
       "type": "subMenu",
       "icon": "pages",
       "child_routes": [

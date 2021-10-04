@@ -116,7 +116,7 @@ class PostDetail extends React.Component {
                               return (
                                  <div key={index} className="product-gallery-item">
                                     <div>
-                                       <a href="javascript:void(0)"
+                                       <a href="#"
                                           onMouseOver={() => this.changePreviewImage(gallery)}
                                        >
                                           <img
@@ -134,7 +134,7 @@ class PostDetail extends React.Component {
                         <div className="preview-full-image">
                            <div className="iron-shadow product-gallery-item ">
                               <div>
-                                 <a href="javascript:void(0)">
+                                 <a href="#">
                                     <img
                                        src={require(`../../../assets/images/${newImage}`)}
                                        alt="poster-image"
@@ -151,7 +151,7 @@ class PostDetail extends React.Component {
                      <Link to="/shop" className="text-14 d-inline-block mb-10">Back to shop</Link>
                      <h3>{name}</h3>
                      <div className="mb-15">
-                        <a href="javascript:void(0)" className="text-underline text-uppercase text-14 d-inline-block dark-color" onClick={() => this.postReviewOpen()}>add a review</a>
+                        <a href="#" className="text-underline text-uppercase text-14 d-inline-block dark-color" onClick={() => this.postReviewOpen()}>add a review</a>
                      </div>
 
                      <h4 className="active-color"><CurrencyIcon /> {price}</h4>

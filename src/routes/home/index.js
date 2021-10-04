@@ -113,11 +113,7 @@ class HomePageOne extends React.Component {
    }
 
    render() {
-
       const { banner, products, blogs, siteFeatures, testimonial, clients } = this.state;
-
-      console.log(products)
-
       return (
          <Fragment>
             {banner !== null && products !== null && blogs !== null ?

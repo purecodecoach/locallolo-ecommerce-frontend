@@ -94,7 +94,7 @@ class ProductEdit extends React.Component {
                                           return (
                                              <div key={index} className="product-gallery-item">
                                                 <div className="image-upload">
-                                                   <a href="javascript:void(0)">
+                                                   <a href="#">
                                                       <img
                                                          src={require(`../../../../assets/images/${gallery}`)}
                                                          alt="product-item"
@@ -122,7 +122,7 @@ class ProductEdit extends React.Component {
                                     <div className="preview-full-image">
                                        <div className="iron-shadow product-gallery-item ">
                                           <div>
-                                             <a href="javascript:void(0)">
+                                             <a href="#">
                                                 <img
                                                    src={require(`../../../../assets/images/${currentDataItem.image}`)}
                                                    alt="poster-image"

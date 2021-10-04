@@ -16,7 +16,7 @@ export default function Tags(props) {
                      <Chip
                         label={dataItem}
                         component="a"
-                        href="javascript:void(0);"
+                        href="#;"
                         clickable
                         className="tag-item"
                      />

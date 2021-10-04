@@ -23,7 +23,7 @@ export default function DownloadApp(props) {
          {appData.map((data, index) => (
             <Grid item key={index} xs={12} sm={12} md={6} lg={6} className="download-item">
                <div className="py-sm-25 py-15">
-                  <a href="javascript:void(0)" className="d-flex justify-content-center align-items-center">
+                  <a href="#" className="d-flex justify-content-center align-items-center">
                      <img src={data.icon} alt="data-icon" height="22" width="22" className="mr-15" />
                      <h4 className="mb-0 font-bold">{data.title}</h4>
                   </a>

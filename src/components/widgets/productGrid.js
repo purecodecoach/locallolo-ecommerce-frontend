@@ -15,7 +15,7 @@ export default class ProductsGrid extends React.Component {
          <div className="iron-product-item post-rounded">
             <Card>
                <div className="iron-overlay-wrap overflow-hidden d-flex justify-content-center align-items-center">
-                  <Link to="javascript:void(0)" className='d-block'>
+                  <Link to="#" className='d-block'>
                      <CardMedia
                         height="140"
                         component="img"

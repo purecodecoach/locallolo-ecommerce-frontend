@@ -60,7 +60,7 @@ class ProductAdd extends React.Component {
                                     return (
                                        <div key={index} className="product-gallery-item">
                                           <div className="image-upload">
-                                             <a href="javascript:void(0)">
+                                             <a href="#">
                                                 <img
                                                    src={gallery}
                                                    alt="product-item"
@@ -88,7 +88,7 @@ class ProductAdd extends React.Component {
                               <div className="preview-full-image">
                                  <div className="iron-shadow product-gallery-item ">
                                     <div>
-                                       <a href="javascript:void(0)">
+                                       <a href="#">
                                           <img
                                              src={data.Preview_Image}
                                              alt="poster-image"

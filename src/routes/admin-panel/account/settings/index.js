@@ -38,7 +38,7 @@ export default class Settings extends React.Component {
       return (
          <div>
             <div className="user-image-upload mb-10">
-               <a href="javascript:void(0)">
+               <a href="#">
                   <img
                      src={require("../../../../assets/avatars/user-edit.png")}
                      alt="product-item"

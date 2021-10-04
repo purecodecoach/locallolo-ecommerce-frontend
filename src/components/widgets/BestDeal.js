@@ -84,7 +84,7 @@ export default class BestDeal extends React.Component {
                         return (
                            <div key={index} className={`preview-image-item ${previewImage === productImage ? 'active' : ''}`}>
                               <div>
-                                 <a href="javascript:void(0)" onClick={() => this.changePreviewImage(productImage)}>
+                                 <a href="#" onClick={() => this.changePreviewImage(productImage)}>
                                     <img src={productImage} alt="best-deal" />
                                  </a>
                               </div>

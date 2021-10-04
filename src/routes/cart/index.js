@@ -94,7 +94,7 @@ class Cart extends React.Component {
                                                       item xs={12} sm={12} md={2} lg={2}
                                                       className="py-0 d-flex justify-content-md-start justify-content-center align-items-center mb-md-0 mb-20"
                                                    >
-                                                      <a href="javascript:void(0);" className="cart-thumb d-inline-block px-10">
+                                                      <a href="#;" className="cart-thumb d-inline-block px-10">
                                                          {this.getUrl(cartItem.image) === 'https:' ?
                                                             <img
                                                                src={cartItem.image}

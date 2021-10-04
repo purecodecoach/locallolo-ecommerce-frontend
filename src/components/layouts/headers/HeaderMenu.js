@@ -20,7 +20,7 @@ function HeaderMenu() {
                if (navLink.child_routes && navLink.child_routes != null) {
                   return (
                      <li key={index} className={classnames({ 'mega-menu': navLink.mega })}>
-                        <a href="javascript:void(0)">
+                        <a href="#">
                            <IntlMessages id={navLink.menu_title} />
                         </a>
                         {(navLink.type && navLink.type === 'subMenu') ?
@@ -31,7 +31,7 @@ function HeaderMenu() {
                                        <Fragment key={index}>
                                           {subNavLink.child_routes !== null ?
                                              <li >
-                                                <a href="javascript:void(0)" className="d-flex justify-content-between align-items-center">
+                                                <a href="#" className="d-flex justify-content-between align-items-center">
                                                    <IntlMessages id={subNavLink.menu_title} />
                                                    <i className="material-icons">keyboard_arrow_right</i>
                                                 </a>
@@ -63,7 +63,7 @@ function HeaderMenu() {
                                  <ul className="sub-menu mb-0 d-flex">
                                     {navLink.child_routes && Object.keys(navLink.child_routes).map((subNavLink, index) => (
                                        <li key={index}>
-                                          <a href="javascript:void(0)"><IntlMessages id={subNavLink} /></a>
+                                          <a href="#"><IntlMessages id={subNavLink} /></a>
                                           <ul className="sub-menu mb-0">
                                              {navLink.child_routes[subNavLink].map((megaMenuItem, index) => (
                                                 <li key={index}>

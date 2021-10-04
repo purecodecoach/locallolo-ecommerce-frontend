@@ -79,10 +79,10 @@ export default class BlogDetail extends Component {
                                  <h2 className="mb-25">{currentDataItem.name}</h2>
                                  <ul className="iron-meta-info mb-25">
                                     <li className="meta-list">
-                                       <a href="javascript:void(0);"><i className="material-icons pr-5">account_circle</i>{currentDataItem.author.author_name}</a>
+                                       <a href="#;"><i className="material-icons pr-5">account_circle</i>{currentDataItem.author.author_name}</a>
                                     </li>
                                     <li className="meta-list">
-                                       <a href="javascript:void(0);"><i className="material-icons pr-5">date_range</i> {currentDataItem.author.post_date}</a>
+                                       <a href="#;"><i className="material-icons pr-5">date_range</i> {currentDataItem.author.post_date}</a>
                                     </li>
                                  </ul>
                               </Grid>
@@ -152,7 +152,7 @@ export default class BlogDetail extends Component {
                                                                <p>{comments.comment}</p>
                                                                <div className="d-flex justify-content-between align-items-center">
                                                                   <div>
-                                                                     <a href="javascript:void(0);" className="text-14 primary-color font-bold">Reply</a>
+                                                                     <a href="#;" className="text-14 primary-color font-bold">Reply</a>
                                                                   </div>
                                                                   <div className="text-14 primary-color font-bold">
                                                                      {comments.date}
@@ -182,7 +182,7 @@ export default class BlogDetail extends Component {
                                                                                  <p>{subComment.comment}</p>
                                                                                  <div className="d-flex justify-content-between align-items-center">
                                                                                     <div>
-                                                                                       <a href="javascript:void(0);" className="text-14 primary-color font-bold">Reply</a>
+                                                                                       <a href="#;" className="text-14 primary-color font-bold">Reply</a>
                                                                                     </div>
                                                                                     <div className="text-14 primary-color font-bold">
                                                                                        {subComment.date}

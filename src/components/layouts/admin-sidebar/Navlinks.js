@@ -17,7 +17,7 @@ export default [
    },
    {
       "menu_title": "admin.products",
-      "path": "javascript:void(0)",
+      "path": "#",
       "icon": "shopping_cart",
       "child_routes": [
          {
