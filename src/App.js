@@ -63,7 +63,6 @@ import AdminLayout from './components/AdminLayout';
 //const EcommerceLayout = () => 
 
 class App extends React.Component {
-
    /**
     * method for update window top when new page render
     */

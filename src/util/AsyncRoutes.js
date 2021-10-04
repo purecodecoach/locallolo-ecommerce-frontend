@@ -53,9 +53,13 @@ const AsyncBlogDetailComponent = Loadable({
 
 // accessories
 const AsyncAccessoriesComponent = Loadable({
-   loader: () => import('../routes/categories/accessories'),
+   loader: () => import('../routes/categories/accessories-custom'),
    loading: () => <ContentLoader />,
 });
+// const AsyncAccessoriesComponent = Loadable({
+//    loader: () => import('../routes/categories/accessories'),
+//    loading: () => <ContentLoader />,
+// });
 
 // contact
 const AsyncContactUsComponent = Loadable({

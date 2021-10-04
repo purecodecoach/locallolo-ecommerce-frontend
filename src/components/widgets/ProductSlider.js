@@ -23,21 +23,21 @@ import { isProductExist, productExitsInWishlist } from "../../helpers";
 function ProductItem(props) {
 
    const { data, onProductAddToCart, onProductAddToWhislist, onPostDetail } = props;
-
+   console.log(data)
    return (
       <Card>
          <div className="iron-overlay-wrap overflow-hidden d-flex justify-content-center align-items-center">
-            <Link to={`/products/${data.type}/${data.objectID}`} className='d-block'>
+            <Link to={`/products/${data.id}`} className='d-block'>
                <CardMedia
                   height="140"
                   component="img"
-                  image={require(`../../assets/images/${data.image}`)}
+                  image={data.images[0].file.url}
                   onClick={onPostDetail}
                />
             </Link>
             <div className="iron-overlay-content d-flex justify-content-end align-items-start">
                <div className="iron-overlay-holder">
-                  {!productExitsInWishlist(data.objectID) ?
+                  {!productExitsInWishlist(data.id) ?
                      <Button
                         onClick={onProductAddToWhislist}
                      >
@@ -62,7 +62,7 @@ function ProductItem(props) {
                <RatingStar />
             </div>
             <div className="iron-btn-grp">
-               {!isProductExist(data.objectID) ?
+               {!isProductExist(data.id) ?
                   (
                      <IconButton className="btn-wrap" onClick={onProductAddToCart}>
                         <i className="material-icons">shopping_cart</i>
@@ -150,7 +150,7 @@ class ProductSlider extends React.Component {
 
       const { selectedTab } = this.state;
       const { productdata } = this.props;
-
+      console.log(productdata, 'products')
       return (
          <div className="product-categories-slider">
             <div className="iron-custom-tab-container">

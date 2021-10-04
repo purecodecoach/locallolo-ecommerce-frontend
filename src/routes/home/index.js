@@ -5,6 +5,7 @@
 import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
+import swell from 'swell-js';
 
 //component
 import BannerSlider from '../../components/widgets/BannerSlider';
@@ -58,13 +59,38 @@ class HomePageOne extends React.Component {
 
    //get products data
    getProducts() {
-      const productsRef = firebase.database().ref('products');
-      productsRef.on('value', (snapshot) => {
-         let products = snapshot.val();
+      swell.products.list({
+         category: 'Men', // Slug or ID
+         limit: 25, // Max. 100
+         page: 1
+      }).then((res) => {
+         // console.log(res.results)
          this.setState({
-            products: products
+            products: {
+               men: res.results
+            }
          });
-      });
+      })
+      swell.products.list({
+         category: 'featured', // Slug or ID
+         limit: 25, // Max. 100
+         page: 1
+      }).then((res) => {
+         // console.log(res.results)
+         this.setState({
+            products: {
+               ...this.state.products,
+               'featured': res.results
+            }
+         });
+      })
+      // const productsRef = firebase.database().ref('products');
+      // productsRef.on('value', (snapshot) => {
+      //    let products = snapshot.val();
+      //    this.setState({
+      //       products: products
+      //    });
+      // });
 
    }
 
