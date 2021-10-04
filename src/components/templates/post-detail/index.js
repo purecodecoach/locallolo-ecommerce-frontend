@@ -120,7 +120,7 @@ class PostDetail extends React.Component {
                                           onMouseOver={() => this.changePreviewImage(gallery)}
                                        >
                                           <img
-                                             src={require(`../../../assets/images/${gallery}`)}
+                                             src={this.state.data.images[0].file.url}
                                              alt="product-item"
                                           />
                                        </a>
@@ -136,7 +136,7 @@ class PostDetail extends React.Component {
                               <div>
                                  <a href="#">
                                     <img
-                                       src={require(`../../../assets/images/${newImage}`)}
+                                       src={this.state.data.images[0] && this.state.data.images[0].file.url}
                                        alt="poster-image"
                                     />
                                  </a>

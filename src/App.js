@@ -111,7 +111,7 @@ class App extends React.Component {
                            <Route exact path="/" component={AsyncHomePageOneComponent} />
                            <Route path="/home-two" component={AsyncHomePageTwoComponent} />
                            <Route path="/home-three" component={AsyncHomePageThreeComponent} />
-                           <Route path="/products/:type/:id" component={AsyncProductDetailComponent} />
+                           <Route path="/products/:id" component={AsyncProductDetailComponent} />
                            <Route path="/cart" component={AsyncCartComponent} />
                            <Route path="/check-out" component={AsyncCheckOutComponent} />
                            <Route path="/payment" component={AsyncPaymentOptionsComponent} />

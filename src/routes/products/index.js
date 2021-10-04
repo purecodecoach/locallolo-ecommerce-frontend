@@ -9,6 +9,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import { Link } from 'react-router-dom';
+import swell from "swell-js";
 
 //connect to store
 import { connect } from 'react-redux';
@@ -103,45 +104,52 @@ class ProductDetail extends React.Component {
       super(props);
       this.state = {
          allProducts: [],
-         productId: parseInt(this.props.match.params.id),
-         productType: this.props.match.params,
+         productId: this.props.match.params.id,
+         // productType: this.props.match.params,
          currentDataItem: null,
          relatedproduct: []
       }
    }
 
+
    componentDidMount() {
-      this.getProducts();
+      this.getProductItem()
    }
 
    //getproducts
    getProducts() {
-      const allProductsRef = firebase.database().ref('products');
-      allProductsRef.on('value', (snapshot) => {
-         let allProducts = snapshot.val();
-         let newTypeData = allProducts[this.state.productType.type];
-         this.setState({
-            relatedproduct: newTypeData
-         })
-         let newState = ((allProducts.men.concat(allProducts.women)).concat(allProducts.gadgets)).concat(allProducts.accessories);
-         this.setState({
-            allProducts: newState
-         });
-         this.getProductItem(newState);
-      });
+      // const allProductsRef = firebase.database().ref('products');
+      // allProductsRef.on('value', (snapshot) => {
+      //    let allProducts = snapshot.val();
+      //    let newTypeData = allProducts[this.state.productType.type];
+      //    this.setState({
+      //       relatedproduct: newTypeData
+      //    })
+      //    let newState = ((allProducts.men.concat(allProducts.women)).concat(allProducts.gadgets)).concat(allProducts.accessories);
+      //    this.setState({
+      //       allProducts: newState
+      //    });
+      //    this.getProductItem(newState);
+      // });
    }
 
-   getProductItem(allProducts) {
+   getProductItem() {
       let { productId } = this.state;
-      if (allProducts && allProducts.length > 0) {
-         for (let Item of allProducts) {
-            if (Item.objectID === productId) {
-               this.setState({
-                  currentDataItem: Item
-               })
-            }
-         }
-      }
+      console.log(productId)
+      swell.products.get(productId).then((res)=>{
+         this.setState({
+            currentDataItem: res
+         })
+      })
+      // if (allProducts && allProducts.length > 0) {
+      //    for (let Item of allProducts) {
+      //       if (Item.objectID === productId) {
+      //          this.setState({
+      //             currentDataItem: Item
+      //          })
+      //       }
+      //    }
+      // }
    }
 
    componentDidUpdate(prevProps) {
@@ -152,18 +160,18 @@ class ProductDetail extends React.Component {
    }
 
    updateProductData(newId) {
-      let Id = parseInt(newId)
-      let { allProducts } = this.state;
-      if (allProducts && allProducts.length > 0) {
-         for (let Item of allProducts) {
-            if (Item.objectID === Id) {
-               this.setState({
-                  currentDataItem: Item
-               })
-               break;
-            }
-         }
-      }
+      // let Id = parseInt(newId)
+      // let { allProducts } = this.state;
+      // if (allProducts && allProducts.length > 0) {
+      //    for (let Item of allProducts) {
+      //       if (Item.objectID === Id) {
+      //          this.setState({
+      //             currentDataItem: Item
+      //          })
+      //          break;
+      //       }
+      //    }
+      // }
    }
 
    //add product to cart
@@ -183,14 +191,15 @@ class ProductDetail extends React.Component {
    }
 
    render() {
-
+      console.log(this.state)
       const { currentDataItem, relatedproduct } = this.state;
+      console.log(currentDataItem, "Current Item")
       return (
          <Fragment>
             {currentDataItem !== null ?
                <div className="product-detail-page" >
                   <PageTitle
-                     title="product details"
+                     title={currentDataItem.name}
                   />
                   <div className="inner-container">
                      <div className="bg-base section-pad">
